@@ -1,0 +1,91 @@
+$off-white: #f1f6f9;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Rajdhani", sans-serif;
+	font-size: 1.5rem;
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	padding: 3em;
+	background: linear-gradient(to bottom right, #0a4d68, #088395, #05bfdb);
+	color: $off-white;
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		font-size: 6rem;
+	}
+	h2 {
+		font-size: 2.8rem;
+	}
+
+	div {
+		display: flex;
+		padding: 1em;
+		align-items: center;
+	}
+
+	label {
+		font-size: 1.5em;
+		padding-right: 0.5em;
+	}
+
+	input {
+		padding: 0.1em 0.5em;
+		margin-right: 0.8em;
+		font-family: "Rajdhani", sans-serif;
+		font-weight: bold;
+		font-size: 1.5rem;
+		border-radius: 0.6em;
+		border-width: 0.2em;
+		border-color: $off-white;
+		background-color: $off-white;
+		border-style: solid;
+	}
+
+	button {
+		font-size: 1.5rem;
+		padding: 0.2em;
+		border-radius: 0.6em;
+		border-width: 0.2em;
+		border-color: $off-white;
+		border-style: solid;
+		background-color: #5eb1c4;
+		color: $off-white;
+		transition: 0.3s;
+
+		&:hover {
+			scale: 1.1;
+		}
+
+		&:active {
+			scale: 1;
+		}
+	}
+}
+
+.grid {
+	display: grid;
+	aspect-ratio: 1/1;
+	background-color: $off-white;
+	border-radius: 1em;
+}
+
+.grid-child {
+	background-color: black;
+	border-style: solid;
+	border-color: red;
+	border-width: 5px;
+}
