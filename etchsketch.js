@@ -7,7 +7,6 @@ function addGridChildren(n) {
 			const rowChild = document.createElement("div");
 			rowChild.className = "grid-child";
 			rowChild.style.backgroundColor = "#fff";
-			rowChild.dataset.originalColor = "test";
 			rowChild.addEventListener("mouseover", hoverColorChange);
 			row.appendChild(rowChild);
 		}
@@ -71,9 +70,3 @@ function updateGrid() {
 }
 
 updateGrid();
-console.log(generateRandomColor());
-console.log(generateRandomColor());
-console.log(generateRandomColor());
-console.log(generateRandomColor());
-console.log(generateRandomColor());
-console.log(generateRandomColor());
