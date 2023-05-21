@@ -55,9 +55,10 @@ const gridSizeInput = document.getElementById("grid-size");
 
 function updateGrid() {
 	let newGridSize = gridSizeInput.value;
-	if (newGridSize > 100) newGridSize = 100;
-	else if (newGridSize < 2) newGridSize = 2;
-	console.log(newGridSize);
+	if (newGridSize > 100 || newGridSize < 2) {
+		alert("Grid Size should be between 2 and 100");
+		return;
+	}
 	clearGrid();
 	addGridChildren(newGridSize);
 }
