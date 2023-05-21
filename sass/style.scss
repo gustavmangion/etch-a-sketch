@@ -108,3 +108,17 @@ body {
 	width: 100%;
 	transition: 0.3s;
 }
+
+footer {
+	display: flex;
+	padding-top: 3em;
+	justify-content: center;
+
+	p {
+		padding-right: 0.6em;
+	}
+
+	img {
+		width: 1.2em;
+	}
+}
