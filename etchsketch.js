@@ -56,6 +56,9 @@ const resizeBtn = document.getElementById("grid-size-confirm");
 resizeBtn.addEventListener("click", updateGrid);
 
 const gridSizeInput = document.getElementById("grid-size");
+gridSizeInput.addEventListener("keydown", function (e) {
+	if (e.key == "Enter") updateGrid();
+});
 
 function updateGrid() {
 	let newGridSize = gridSizeInput.value;
