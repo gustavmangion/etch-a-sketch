@@ -6,7 +6,7 @@ function addGridChildren(n) {
 		for (let j = 0; j < n; j++) {
 			const rowChild = document.createElement("div");
 			rowChild.className = "grid-child";
-			rowChild.style.backgroundColor = generateRandomColor();
+			rowChild.style.backgroundColor = "#fff";
 			rowChild.dataset.originalColor = "test";
 			rowChild.addEventListener("mouseover", hoverColorChange);
 			row.appendChild(rowChild);
@@ -31,18 +31,23 @@ function hoverColorChange(e) {
 	let backgroundColor = window
 		.getComputedStyle(e.target, null)
 		.getPropertyValue("background-color");
-	let index = backgroundColor.lastIndexOf(",");
-	let currentOpacity = backgroundColor.substring(index + 1).slice(0, -1);
+
 	let newColor = "";
-	//when opacity is 1, it is omitted from rgb string}
-	if (currentOpacity > 1) {
-		newColor = backgroundColor.slice(0, -1) + ", " + 0.9 + ")";
-	} else if (currentOpacity == 0) return;
-	else {
-		newColor =
-			backgroundColor.substring(0, index + 2) +
-			Math.round((currentOpacity - 0.1) * 10) / 10 +
-			")";
+
+	if (backgroundColor === "rgb(255, 255, 255)") {
+		newColor = generateRandomColor();
+	} else {
+		let index = backgroundColor.lastIndexOf(",");
+		let currentOpacity = backgroundColor.substring(index + 1).slice(0, -1);
+		if (currentOpacity > 1) {
+			newColor = backgroundColor.slice(0, -1) + ", " + 0.9 + ")";
+		} else if (currentOpacity == 0) return;
+		else {
+			newColor =
+				backgroundColor.substring(0, index + 2) +
+				Math.round((currentOpacity - 0.1) * 10) / 10 +
+				")";
+		}
 	}
 	e.target.style.backgroundColor = newColor;
 }
