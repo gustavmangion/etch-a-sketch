@@ -33,7 +33,7 @@ body {
 
 	div {
 		display: flex;
-		padding: 1em;
+		padding: 2em;
 		align-items: center;
 	}
 
@@ -99,10 +99,6 @@ body {
 }
 
 .grid-child {
-	// background-color: $off-white;
-	border-style: solid;
-	border-color: red;
-	border-width: 0.1px;
-	// margin: 10px;
 	width: 100%;
+	transition: 0.3s;
 }

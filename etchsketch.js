@@ -39,7 +39,6 @@ function hoverColorChange(e) {
 		newColor = backgroundColor.slice(0, -1) + ", " + 0.9 + ")";
 	} else if (currentOpacity == 0) return;
 	else {
-		console.log(backgroundColor.substring(0, index + 2));
 		newColor =
 			backgroundColor.substring(0, index + 2) +
 			Math.round((currentOpacity - 0.1) * 10) / 10 +
