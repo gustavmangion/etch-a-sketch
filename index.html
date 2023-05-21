@@ -21,11 +21,20 @@
 				<h2>Unleash your inner Picasso</h2>
 				<div>
 					<label for="grid_size">Grid Size: </label>
-					<input type="text" id="grid-size" />
+					<input
+						id="grid-size"
+						type="number"
+						min="2"
+						max="100"
+						value="2"
+						id="grid-size"
+					/>
 					<button id="grid-size-confirm">Go!</button>
 				</div>
 			</div>
-			<div class="grid"></div>
+			<div class="grid-border">
+				<div class="grid"></div>
+			</div>
 		</div>
 		<script src="etchsketch.js"></script>
 	</body>

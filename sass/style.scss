@@ -53,6 +53,11 @@ body {
 		border-color: $off-white;
 		background-color: $off-white;
 		border-style: solid;
+		max-width: 5em;
+
+		&:focus-visible {
+			outline-color: #088395;
+		}
 	}
 
 	button {
@@ -76,16 +81,27 @@ body {
 	}
 }
 
+.grid-border {
+	background-color: $off-white;
+	padding: 0.7em;
+	border-radius: 1em;
+}
+
 .grid {
 	display: grid;
 	aspect-ratio: 1/1;
-	background-color: $off-white;
-	border-radius: 1em;
+
+	& > div {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 .grid-child {
 	background-color: black;
 	border-style: solid;
 	border-color: red;
-	border-width: 5px;
+	border-width: 0.1px;
+	// margin: 10px;
+	width: 100%;
 }
