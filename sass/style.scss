@@ -110,10 +110,17 @@ body {
 }
 
 footer {
-	display: flex;
 	padding-top: 3em;
-	justify-content: center;
 
+	a {
+		display: flex;
+		justify-content: center;
+		text-decoration: none;
+
+		&:visited {
+			color: inherit;
+		}
+	}
 	p {
 		padding-right: 0.6em;
 	}
